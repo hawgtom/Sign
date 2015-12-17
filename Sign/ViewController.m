@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "LoginVerification.h"
 #import "MBProgressHUD.h"
+#import "GUAAlertView.h"
 @interface ViewController ()<MBProgressHUDDelegate>
 {
     MBProgressHUD *HUD;
@@ -34,7 +36,6 @@
     {
         
         [self alertStatus:@"Please enter Email and Password" :@"Sign in Failed!" :0];
-        
     }
     else
     {
@@ -42,16 +43,20 @@
   
     }
 }
+
+- (IBAction)signupclicked:(id)sender {
+    [self performSegueWithIdentifier:@"signup_trigger" sender:self];
+}
 -(void)check
 {
-    NSURL *URL = [NSURL URLWithString:@"http://192.168.1.10"];
+    NSURL *URL = [NSURL URLWithString:@"http://192.168.1.13"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [connection start];
     [connection release];
-      HUD = [[MBProgressHUD showHUDAddedTo:self.view animated:YES] retain];
-      HUD.labelText = @"Connecting to Signature..";
+     HUD = [[MBProgressHUD showHUDAddedTo:self.view animated:YES] retain];
+     HUD.labelText = @"Connecting to Signature..";
    }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     expectedLength = MAX([response expectedContentLength], 1);
@@ -66,8 +71,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [HUD showWhileExecuting:@selector(myMixedTask) onTarget:self withObject:nil animated:YES];
-    
-
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -108,7 +111,7 @@
                                    NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[self.username text],[self.password text]];
                                    NSLog(@"PostData: %@",post);
                                    
-                                   NSURL *url=[NSURL URLWithString:@"http://192.168.1.10/projects/sign/login.php"];
+                                   NSURL *url=[NSURL URLWithString:@"http://192.168.1.13/projects/sign/login.php"];
                                    
                                    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
                                    
@@ -147,6 +150,10 @@
                                        if(success == 1)
                                        {
                                                [self performSegueWithIdentifier:@"login_success" sender:self];
+                                       }else if (success==2)
+                                       {
+                                           NSString *error_msg = (NSString *) jsonData[@"error_message"];
+                                           [self alert:error_msg :@"Login Failed" :0];
                                        }
                                        else
                                        {
@@ -170,22 +177,51 @@
                        );
                     }
                    );
-    
-    
 }
-
+- (void) alert:(NSString *)msg :(NSString *)title :(int) tag
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:msg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Verify Now" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+    {
+        [self performSegueWithIdentifier:@"verify_login" sender:self];
+    }];
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+                                    {
+                                        
+                                    }];
+    [alert addAction:cancel];
+    [alert addAction:ok];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 - (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-                                                        message:msg
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil, nil];
-    alertView.tag = tag;
-    [alertView show];
-    
+    GUAAlertView *v = [GUAAlertView alertViewWithTitle:title
+                                               message:msg
+                                           buttonTitle:@"Swipe Alert Down"
+                                   buttonTouchedAction:^{
+                                       NSLog(@"button touched");
+                                   } dismissAction:^{
+                                       NSLog(@"dismiss");
+                                   }];
+    [v show];
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"verify_login"]) {
+        
+        // Get destination view
+        LoginVerification *vc = [segue destinationViewController];
+        
+        // Get button tag number (or do whatever you need to do here, based on your object
+        vc.getemail = [self.username text];
+    }
+}
 - (IBAction)backgroundtab:(id)sender {
     [self.view endEditing:YES];
 }

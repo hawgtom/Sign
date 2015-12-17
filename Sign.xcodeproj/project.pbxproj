@@ -21,12 +21,17 @@
 		B28CDF511C086CA1000F5138 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B28CDF4C1C086CA1000F5138 /* Icon.png */; };
 		B28CDF521C086CA1000F5138 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B28CDF4D1C086CA1000F5138 /* Icon@2x.png */; };
 		B28CDF5D1C088884000F5138 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28CDF5C1C088884000F5138 /* SystemConfiguration.framework */; };
+		B2CA892D1C09706D002BDE52 /* signup.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CA892C1C09706D002BDE52 /* signup.m */; };
+		B2CA89301C097529002BDE52 /* GUAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CA892F1C097529002BDE52 /* GUAAlertView.m */; };
 		B2D4245D1C06E33A001FDCD9 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2D4245C1C06E33A001FDCD9 /* back.jpg */; };
 		B2D424611C06E685001FDCD9 /* bac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2D424601C06E685001FDCD9 /* bac.jpg */; };
 		B2D424631C070947001FDCD9 /* but.gif in Resources */ = {isa = PBXBuildFile; fileRef = B2D424621C070947001FDCD9 /* but.gif */; };
 		B2D424651C070A20001FDCD9 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D424641C070A20001FDCD9 /* login.png */; };
 		B2D424671C070AAD001FDCD9 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D424661C070AAD001FDCD9 /* text.png */; };
 		B2D4246A1C07119D001FDCD9 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2D424691C07119D001FDCD9 /* login.jpg */; };
+		B2F9B6AF1C0C17A3005E00A0 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F9B6AE1C0C17A3005E00A0 /* country.plist */; };
+		B2F9B6B21C0C583E005E00A0 /* verification.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9B6B11C0C583E005E00A0 /* verification.m */; };
+		B2F9B6DA1C0DA896005E00A0 /* LoginVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F9B6D91C0DA896005E00A0 /* LoginVerification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,12 +54,21 @@
 		B28CDF4C1C086CA1000F5138 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Assets/Icon.png; sourceTree = "<group>"; };
 		B28CDF4D1C086CA1000F5138 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Assets/Icon@2x.png"; sourceTree = "<group>"; };
 		B28CDF5C1C088884000F5138 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B2CA892B1C09706D002BDE52 /* signup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signup.h; sourceTree = "<group>"; };
+		B2CA892C1C09706D002BDE52 /* signup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signup.m; sourceTree = "<group>"; };
+		B2CA892E1C097529002BDE52 /* GUAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUAAlertView.h; sourceTree = "<group>"; };
+		B2CA892F1C097529002BDE52 /* GUAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUAAlertView.m; sourceTree = "<group>"; };
 		B2D4245C1C06E33A001FDCD9 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back.jpg; path = ../../Assets/back.jpg; sourceTree = "<group>"; };
 		B2D424601C06E685001FDCD9 /* bac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bac.jpg; path = ../../Assets/bac.jpg; sourceTree = "<group>"; };
 		B2D424621C070947001FDCD9 /* but.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = but.gif; path = ../../Assets/but.gif; sourceTree = "<group>"; };
 		B2D424641C070A20001FDCD9 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = ../../Assets/login.png; sourceTree = "<group>"; };
 		B2D424661C070AAD001FDCD9 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = text.png; path = ../../Assets/text.png; sourceTree = "<group>"; };
 		B2D424691C07119D001FDCD9 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = login.jpg; path = ../../Assets/login.jpg; sourceTree = "<group>"; };
+		B2F9B6AE1C0C17A3005E00A0 /* country.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country.plist; sourceTree = "<group>"; };
+		B2F9B6B01C0C583E005E00A0 /* verification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = verification.h; sourceTree = "<group>"; };
+		B2F9B6B11C0C583E005E00A0 /* verification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = verification.m; sourceTree = "<group>"; };
+		B2F9B6D81C0DA896005E00A0 /* LoginVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVerification.h; sourceTree = "<group>"; };
+		B2F9B6D91C0DA896005E00A0 /* LoginVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVerification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +103,11 @@
 		B201327D1C05B591004C1FD3 /* Sign */ = {
 			isa = PBXGroup;
 			children = (
+				B2F9B6AD1C0C1786005E00A0 /* List */,
 				B28CDF2D1C084B39000F5138 /* UI */,
 				B28CDF2C1C084B21000F5138 /* Scripts */,
 				B2D424681C070AB0001FDCD9 /* Images */,
 				B201328A1C05B591004C1FD3 /* Assets.xcassets */,
-				B201328F1C05B591004C1FD3 /* Info.plist */,
 				B201327E1C05B591004C1FD3 /* Supporting Files */,
 			);
 			path = Sign;
@@ -110,12 +124,20 @@
 		B28CDF2C1C084B21000F5138 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				B2CA892E1C097529002BDE52 /* GUAAlertView.h */,
+				B2CA892F1C097529002BDE52 /* GUAAlertView.m */,
 				B28CDF461C086C86000F5138 /* MBProgressHUD.h */,
 				B28CDF471C086C86000F5138 /* MBProgressHUD.m */,
 				B20132811C05B591004C1FD3 /* AppDelegate.h */,
 				B20132821C05B591004C1FD3 /* AppDelegate.m */,
 				B20132851C05B591004C1FD3 /* ViewController.m */,
 				B20132841C05B591004C1FD3 /* ViewController.h */,
+				B2CA892B1C09706D002BDE52 /* signup.h */,
+				B2CA892C1C09706D002BDE52 /* signup.m */,
+				B2F9B6B01C0C583E005E00A0 /* verification.h */,
+				B2F9B6B11C0C583E005E00A0 /* verification.m */,
+				B2F9B6D81C0DA896005E00A0 /* LoginVerification.h */,
+				B2F9B6D91C0DA896005E00A0 /* LoginVerification.m */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -146,6 +168,15 @@
 				B20132951C05BC99004C1FD3 /* sign.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B2F9B6AD1C0C1786005E00A0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B201328F1C05B591004C1FD3 /* Info.plist */,
+				B2F9B6AE1C0C17A3005E00A0 /* country.plist */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +210,7 @@
 				TargetAttributes = {
 					B201327A1C05B591004C1FD3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = BL2BWVL3J5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -221,6 +253,7 @@
 				B201328E1C05B591004C1FD3 /* LaunchScreen.storyboard in Resources */,
 				B2D424651C070A20001FDCD9 /* login.png in Resources */,
 				B28CDF4F1C086CA1000F5138 /* Icon-Small.png in Resources */,
+				B2F9B6AF1C0C17A3005E00A0 /* country.plist in Resources */,
 				B28CDF4E1C086CA1000F5138 /* Icon-iOS7@2x.png in Resources */,
 				B201328B1C05B591004C1FD3 /* Assets.xcassets in Resources */,
 				B28CDF511C086CA1000F5138 /* Icon.png in Resources */,
@@ -236,8 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20132861C05B591004C1FD3 /* ViewController.m in Sources */,
+				B2CA89301C097529002BDE52 /* GUAAlertView.m in Sources */,
+				B2F9B6DA1C0DA896005E00A0 /* LoginVerification.m in Sources */,
+				B2F9B6B21C0C583E005E00A0 /* verification.m in Sources */,
 				B20132831C05B591004C1FD3 /* AppDelegate.m in Sources */,
 				B20132801C05B591004C1FD3 /* main.m in Sources */,
+				B2CA892D1C09706D002BDE52 /* signup.m in Sources */,
 				B28CDF481C086C86000F5138 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +390,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.columbus.Sign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +404,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.columbus.Sign;
 				PRODUCT_NAME = "$(TARGET_NAME)";

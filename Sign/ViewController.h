@@ -15,6 +15,7 @@
 
 - (IBAction)backgroundtab:(id)sender;
 - (IBAction)loginclicked:(id)sender;
+- (IBAction)signupclicked:(id)sender;
 
 @end
 
